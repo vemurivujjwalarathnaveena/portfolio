@@ -2,11 +2,15 @@
 <html lang="en">
 
 <head>
+<meta name="description" content="Official portfolio of Vemuri Vujjwala Rathna Veena. AI Developer, Web Developer, Python Programmer, and Data Analytics Enthusiast.">
 
+<meta name="keywords" content="Vemuri Vujjwala Rathna Veena, Vujjwala, AI Developer, Web Developer, Python Developer, Portfolio">
+
+<meta name="author" content="Vemuri Vujjwala Rathna Veena">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Vujjwala Portfolio</title>
+    <title>Vemuri Vujjwala Rathna Veena | Portfolio</title>
 
     <style>
 
@@ -407,7 +411,258 @@
                 font-size:35px;
             }
         }
+/* MOBILE RESPONSIVE DESIGN */
 
+@media (max-width: 768px) {
+
+    header{
+        flex-direction:column;
+        padding:15px;
+        text-align:center;
+    }
+
+    header h1{
+        font-size:24px;
+        line-height:1.3;
+        margin-bottom:10px;
+    }
+
+    nav{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:12px;
+        margin-top:10px;
+    }
+
+    nav a{
+        margin:0;
+        font-size:16px;
+    }
+
+    .hero{
+        min-height:90vh;
+        padding:30px 20px;
+    }
+
+    .profile-pic{
+        width:130px;
+        height:130px;
+    }
+
+    .hero-content h2{
+        font-size:38px;
+        line-height:1.2;
+    }
+
+    .hero-content p{
+        font-size:18px;
+        line-height:1.5;
+    }
+
+    .btn{
+        padding:12px 25px;
+        font-size:16px;
+    }
+
+    section{
+        padding:60px 20px;
+    }
+
+    .section-title{
+        font-size:32px;
+        margin-bottom:30px;
+    }
+
+    .glass-box{
+        padding:25px;
+    }
+
+    .skills-container{
+        grid-template-columns:1fr;
+    }
+
+    .projects-container{
+        grid-template-columns:1fr;
+    }
+
+    .project-card{
+        padding:25px;
+    }
+
+    .project-card h3{
+        font-size:22px;
+    }
+
+    .project-card p{
+        font-size:15px;
+        line-height:1.6;
+    }
+
+    .contact p{
+        font-size:18px;
+        line-height:1.6;
+        word-break:break-word;
+    }
+
+    .contact a{
+        font-size:16px;
+        display:block;
+        margin-top:5px;
+        overflow-wrap:break-word;
+    }
+
+    footer{
+        font-size:14px;
+        padding:20px;
+    }
+    /* HAMBURGER MENU */
+
+.menu-icon{
+    display:none;
+    font-size:30px;
+    cursor:pointer;
+    color:white;
+}
+
+/* MOBILE MENU */
+
+@media (max-width:768px){
+
+    header{
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:center;
+        padding:15px 20px;
+        position:relative;
+    }
+
+    header h1{
+        font-size:20px;
+        max-width:75%;
+    }
+
+    .menu-icon{
+        display:block;
+    }
+
+    nav{
+        display:none;
+        position:absolute;
+        top:70px;
+        right:15px;
+        background:rgba(0,0,0,0.95);
+        backdrop-filter:blur(10px);
+        border-radius:10px;
+        padding:15px;
+        min-width:180px;
+        z-index:9999;
+    }
+
+    nav.active{
+        display:flex;
+        flex-direction:column;
+    }
+
+    nav a{
+        margin:10px 0;
+        text-align:center;
+        font-size:18px;
+    }
+
+    .hero-content h2{
+        font-size:40px;
+    }
+
+    .hero-content p{
+        font-size:18px;
+    }
+
+    .profile-pic{
+        width:130px;
+        height:130px;
+    }
+
+    .section-title{
+        font-size:32px;
+    }
+
+    .skills-container{
+        grid-template-columns:1fr;
+    }
+
+    .projects-container{
+        grid-template-columns:1fr;
+    }
+
+    .contact p{
+        font-size:18px;
+    }
+
+    .contact a{
+        font-size:16px;
+        word-break:break-word;
+    }
+}
+/* MENU ICON */
+
+.menu-icon{
+    font-size:32px;
+    cursor:pointer;
+    color:white;
+    transition:0.3s;
+}
+
+.menu-icon:hover{
+    color:#00d4ff;
+}
+
+/* HIDE MENU INITIALLY */
+
+#navMenu{
+    display:none;
+    position:absolute;
+    top:80px;
+    right:20px;
+    background:rgba(0,0,0,0.95);
+    backdrop-filter:blur(10px);
+    padding:20px;
+    border-radius:15px;
+    min-width:220px;
+    z-index:9999;
+    flex-direction:column;
+}
+
+#navMenu.active{
+    display:flex;
+}
+
+#navMenu a{
+    color:white;
+    text-decoration:none;
+    padding:12px;
+    font-size:18px;
+    text-align:center;
+    transition:0.3s;
+}
+
+#navMenu a:hover{
+    color:#00d4ff;
+    background:rgba(255,255,255,0.05);
+    border-radius:8px;
+}
+
+header{
+    position:sticky;
+    top:0;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+}
     </style>
 
 </head>
@@ -445,18 +700,22 @@
 
     <header>
 
-        <h1>Vemuri Vujjwala Rathna Veena</h1>
+    <h1>Vemuri Vujjwala Rathna Veena</h1>
 
-        <nav>
+    <div class="menu-icon" onclick="toggleMenu()">
+        ☰
+    </div>
 
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+    <nav id="navMenu">
 
-        </nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
 
-    </header>
+    </nav>
+
+</header>
 
     <!-- HERO -->
 
@@ -590,8 +849,6 @@
         <h2 class="section-title">Projects</h2>
 
         <div class="projects-container">
-
-           <div class="projects-container">
 
     <!-- PROJECT 1 -->
 
@@ -739,7 +996,13 @@
         </p>
 
     </footer>
+<script>
 
+function toggleMenu(){
+    document.getElementById("navMenu").classList.toggle("active");
+}
+
+</script>
 </body>
 
 </html>
