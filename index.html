@@ -259,27 +259,63 @@
         /* SKILLS */
 
         .skills-container{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-            gap:25px;
-        }
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
 
-        .skill{
-            background:rgba(255,255,255,0.08);
-            padding:25px;
-            border-radius:15px;
-            text-align:center;
-            transition:0.3s;
-            font-size:18px;
-            backdrop-filter:blur(10px);
-        }
+        .popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.85);
+    z-index:999999;
+}
 
-        .skill:hover{
-            transform:translateY(-8px);
-            background:#00d4ff;
-            color:black;
-        }
+.popup-content{
+    position:relative;
+    background:#111827;
+    color:white;
+    width:80%;
+    max-width:650px;
+    margin:100px auto;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 0 25px #00d4ff;
+}
 
+.close-btn{
+    position:absolute;
+    top:10px;
+    right:20px;
+    font-size:30px;
+    cursor:pointer;
+    color:#00d4ff;
+}
+.skill{
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+    font-size: 18px;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.skill:hover{
+    transform: translateY(-8px);
+    background: #00d4ff;
+    color: black;
+    box-shadow: 0 0 25px #00d4ff;
+}
+        
         /* PROJECTS */
 
         .projects-container{
@@ -662,6 +698,40 @@ header{
     justify-content:space-between;
     align-items:center;
 }
+.popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.8);
+    z-index:99999;
+}
+
+.popup-content{
+    background:#111827;
+    color:white;
+    width:80%;
+    max-width:600px;
+    margin:120px auto;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 0 20px #00d4ff;
+}
+
+.close-btn{
+    float:right;
+    font-size:30px;
+    cursor:pointer;
+    color:#00d4ff;
+}
+
+.popup-content h2{
+    color:#00d4ff;
+    margin-bottom:20px;
+}
 }
     </style>
 
@@ -779,63 +849,55 @@ header{
 
             <div class="skills-container">
 
-    <div class="skill">HTML</div>
+    <div class="skill" onclick="showSkill('html')">HTML</div>
 
-    <div class="skill">CSS</div>
+<div class="skill" onclick="showSkill('css')">CSS</div>
 
-    <div class="skill">JavaScript</div>
+<div class="skill" onclick="showSkill('javascript')">JavaScript</div>
 
-    <div class="skill">Python</div>
+<div class="skill" onclick="showSkill('python')">Python</div>
 
-    <div class="skill">Flask</div>
+<div class="skill" onclick="showSkill('flask')">Flask</div>
 
-    <div class="skill">Machine Learning</div>
+<div class="skill" onclick="showSkill('machinelearning')">Machine Learning</div>
 
-    <div class="skill">Artificial Intelligence</div>
+<div class="skill" onclick="showSkill('ai')">Artificial Intelligence</div>
 
-    <div class="skill">Data Analytics</div>
+<div class="skill" onclick="showSkill('analytics')">Data Analytics</div>
 
-    <div class="skill">SQL</div>
+<div class="skill" onclick="showSkill('sql')">SQL</div>
 
-    <div class="skill">Power BI</div>
+<div class="skill" onclick="showSkill('powerbi')">Power BI</div>
 
-    <div class="skill">GA4</div>
+<div class="skill" onclick="showSkill('ga4')">GA4</div>
 
-    <div class="skill">Resume Building</div>
+<div class="skill" onclick="showSkill('resume')">Resume Building</div>
 
-    <div class="skill">ATS Resume Analysis</div>
+<div class="skill" onclick="showSkill('ats')">ATS Resume Analysis</div>
 
-    <div class="skill">Web Development</div>
+<div class="skill" onclick="showSkill('webdev')">Web Development</div>
 
-    <div class="skill">Frontend Development</div>
+<div class="skill" onclick="showSkill('frontend')">Frontend Development</div>
 
-    <div class="skill">Responsive Web Design</div>
+<div class="skill" onclick="showSkill('responsive')">Responsive Web Design</div>
 
-    <div class="skill">Problem Solving</div>
+<div class="skill" onclick="showSkill('problemsolving')">Problem Solving</div>
 
-    <div class="skill">Analytical Thinking</div>
+<div class="skill" onclick="showSkill('analytical')">Analytical Thinking</div>
 
-    <div class="skill">UI Design</div>
+<div class="skill" onclick="showSkill('ui')">UI Design</div>
 
-    <div class="skill">Dashboard Development</div>
+<div class="skill" onclick="showSkill('dashboard')">Dashboard Development</div>
 
-    <div class="skill">IoT Concepts</div>
+<div class="skill" onclick="showSkill('cyber')">Cybersecurity Basics</div>
 
-    <div class="skill">Cybersecurity Basics</div>
+<div class="skill" onclick="showSkill('java')">Java Programming</div>
 
-    <div class="skill">Java Programming</div>
+<div class="skill" onclick="showSkill('c')">C Programming</div>
 
-    <div class="skill">C Programming</div>
+<div class="skill" onclick="showSkill('github')">GitHub</div>
 
-    <div class="skill">Communication Skills</div>
-
-    <div class="skill">Team Collaboration</div>
-
-    <div class="skill">Presentation Skills</div>
-
-    <div class="skill">GitHub</div>
-
-    <div class="skill">VS Code</div>
+<div class="skill" onclick="showSkill('vscode')">VS Code</div>
 
 </div>
 
@@ -1002,7 +1064,162 @@ function toggleMenu(){
     document.getElementById("navMenu").classList.toggle("active");
 }
 
+function showSkill(skill){
+
+    let title="";
+    let description="";
+
+    switch(skill){
+
+        case "html":
+            title="HTML";
+            description="I can create structured web pages, forms, tables, navigation bars, portfolios, and responsive website layouts.";
+            break;
+
+        case "css":
+            title="CSS";
+            description="I can design attractive interfaces, animations, glassmorphism effects, hover effects, and responsive layouts.";
+            break;
+
+        case "javascript":
+            title="JavaScript";
+            description="I can create interactive web pages, menus, popups, validations, and dynamic website features.";
+            break;
+
+        case "python":
+            title="Python";
+            description="I can develop applications, automation scripts, AI projects, data analysis solutions, and backend systems.";
+            break;
+
+        case "flask":
+            title="Flask";
+            description="I can build web applications, APIs, login systems, and database-connected projects.";
+            break;
+
+        case "machinelearning":
+            title="Machine Learning";
+            description="I can train models, analyze datasets, build prediction systems, and implement ML algorithms.";
+            break;
+
+        case "ai":
+            title="Artificial Intelligence";
+            description="I can develop AI-based applications, automation solutions, and intelligent systems.";
+            break;
+
+        case "analytics":
+            title="Data Analytics";
+            description="I can analyze datasets, generate insights, visualize data, and support data-driven decisions.";
+            break;
+
+        case "sql":
+            title="SQL";
+            description="I can create databases, write queries, manage records, and perform CRUD operations.";
+            break;
+
+        case "powerbi":
+            title="Power BI";
+            description="I can create dashboards, reports, visualizations, and business intelligence solutions.";
+            break;
+
+        case "ga4":
+            title="GA4";
+            description="I can track website traffic, user behavior, events, and generate analytics reports.";
+            break;
+
+        case "resume":
+            title="Resume Building";
+            description="I can create professional resumes tailored for internships, placements, and job applications.";
+            break;
+
+        case "ats":
+            title="ATS Resume Analysis";
+            description="I can evaluate resumes for ATS compatibility, keyword optimization, and recruiter visibility.";
+            break;
+
+        case "webdev":
+            title="Web Development";
+            description="I can build complete websites from design to deployment using modern web technologies.";
+            break;
+
+        case "frontend":
+            title="Frontend Development";
+            description="I can create responsive and user-friendly interfaces using HTML, CSS, and JavaScript.";
+            break;
+
+        case "responsive":
+            title="Responsive Web Design";
+            description="I can make websites adapt seamlessly across mobile, tablet, and desktop devices.";
+            break;
+
+        case "problemsolving":
+            title="Problem Solving";
+            description="I can analyze challenges, debug issues, and implement efficient technical solutions.";
+            break;
+
+        case "analytical":
+            title="Analytical Thinking";
+            description="I can evaluate situations logically, interpret data, and make informed decisions.";
+            break;
+
+        case "ui":
+            title="UI Design";
+            description="I can design visually appealing interfaces with focus on usability and user experience.";
+            break;
+
+        case "dashboard":
+            title="Dashboard Development";
+            description="I can create interactive dashboards for monitoring data and performance metrics.";
+            break;
+
+        case "cyber":
+            title="Cybersecurity Basics";
+            description="I understand basic security concepts, authentication, secure coding, and online safety practices.";
+            break;
+
+        case "java":
+            title="Java Programming";
+            description="I can develop object-oriented applications and understand core Java programming concepts.";
+            break;
+
+        case "c":
+            title="C Programming";
+            description="I can write structured programs, implement algorithms, and understand low-level programming concepts.";
+            break;
+
+        case "github":
+            title="GitHub";
+            description="I can manage repositories, version control projects, collaborate on code, and deploy applications.";
+            break;
+
+        case "vscode":
+            title="VS Code";
+            description="I can efficiently develop, debug, and manage projects using Visual Studio Code.";
+            break;
+    }
+
+    document.getElementById("skillTitle").innerHTML = title;
+    document.getElementById("skillDescription").innerHTML = description;
+    document.getElementById("skillPopup").style.display = "block";
+}
+
+function closePopup(){
+    document.getElementById("skillPopup").style.display = "none";
+}
+
 </script>
+<div id="skillPopup" class="popup">
+
+    <div class="popup-content">
+
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+
+        <h2 id="skillTitle"></h2>
+
+        <p id="skillDescription"></p>
+
+    </div>
+
+</div>
 </body>
 
 </html>
